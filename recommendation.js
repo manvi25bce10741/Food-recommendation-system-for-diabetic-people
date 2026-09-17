@@ -1,27 +1,24 @@
-// 2. AGE GROUPING
-// ---------------------------------------------------------------
+//AGE GROUPING
 function ageGroup(age){
   if (age <= 30) return "young_adult";
   if (age <= 55) return "adult";
   return "senior";
 }
 
-// ---------------------------------------------------------------
-// 3. GI BUCKETS (for the label shown on each card)
-// ---------------------------------------------------------------
+//GI BUCKETS (for the label shown on each card)
+
 function giLabel(gi){
   if (gi <= 35) return { text:"Low GI", cls:"low" };
   if (gi <= 55) return { text:"Medium GI", cls:"med" };
   return { text:"Higher GI", cls:"high" };
 }
 
-// ---------------------------------------------------------------
-// 4. SCORING FUNCTION
+//SCORING FUNCTION
 // Combines: diabetes-type fit, glycemic index, fibre content,
 // age-group match, and gender-based micronutrient relevance.
 // This is a transparent, rule-weighted scoring model — a simple
 // content-based recommender rather than a black-box ML model.
-// ---------------------------------------------------------------
+
 function scoreFood(food, profile){
   let score = 0;
 
@@ -53,9 +50,8 @@ function scoreFood(food, profile){
   return score;
 }
 
-// ---------------------------------------------------------------
-// 5. FILTER + RANK
-// ---------------------------------------------------------------
+//FILTER + RANK
+
 function recommend(profile){
   const pool = FOODS.filter(f => f.diet === profile.diet && f.meal.includes(profile.meal));
   const scored = pool.map(f => ({ food:f, score:scoreFood(f, profile) }));
@@ -70,5 +66,3 @@ function recommend(profile){
   });
   return top;
 }
-
-// ---------------------------------------------------------------
