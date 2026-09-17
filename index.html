@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DiaPlate — Smart meals for steady sugar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <div class="wordmark">Dia<span>Plate</span></div>
+    <div class="site-tagline">A food guide built around blood sugar, not around guesswork.</div>
+  </header>
+
+  <section class="hero">
+    <h1>Find meals that keep your sugar steady.</h1>
+    <p>Tell DiaPlate a little about yourself and the meal you're planning. It weighs glycemic load, fibre, and key minerals against your profile and returns the three dishes that fit best.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Build your meal profile</h2>
+    <p class="sub">Every field below changes the recommendation — none of it leaves your browser.</p>
+    <form id="recForm">
+      <div class="field-grid">
+        <div class="field">
+          <label for="age">Age (years)</label>
+          <input type="number" id="age" min="10" max="100" value="35" required>
+        </div>
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender">
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="other">Other / prefer not to say</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="diet">Dietary preference</label>
+          <select id="diet">
+            <option value="veg">Vegetarian</option>
+            <option value="nonveg">Non-vegetarian</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="meal">Meal</label>
+          <select id="meal">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="dtype">Type of diabetes</label>
+          <select id="dtype">
+            <option value="type2">Type 2</option>
+            <option value="type1">Type 1</option>
+            <option value="gestational">Gestational</option>
+            <option value="prediabetes">Prediabetes</option>
+          </select>
+        </div>
+      </div>
+      <div class="submit-row">
+        <button type="submit" class="primary">Find my meals</button>
+        <span class="form-msg" id="formMsg">Please enter a valid age between 10 and 100.</span>
+      </div>
+    </form>
+  </section>
+
+  <section class="results" id="results" hidden>
+    <div class="results-head">
+      <h2 id="resultsHeading">Your top picks</h2>
+      <span class="count" id="resultsCount"></span>
+    </div>
+    <div class="cards" id="cardsGrid"></div>
+  </section>
+
+  <p class="disclaimer">DiaPlate is an educational demo. Nutrient values are typical estimates per serving, not lab-measured figures, and the recommendations are not medical advice — always check meal plans with a doctor or dietitian, especially for Type 1 or gestational diabetes where insulin dosing and food safety matter.</p>
+
+</div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/recommendation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
