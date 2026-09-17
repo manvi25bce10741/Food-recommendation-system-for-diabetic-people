@@ -3,9 +3,9 @@
 // keep in a database. giValue = glycemic index (0-100, lower is
 // better for blood sugar). diabetesFit scores each diabetes type
 // from 0-10 based on established dietary guidance for that type.
-// ---------------------------------------------------------------
+
 const FOODS = [
-  // ---------------- BREAKFAST · VEG ----------------
+  //BREAKFAST · VEG 
   { id:1, name:"Moong Dal Chilla with Mint Chutney", meal:["breakfast"], diet:"veg",
     serving:"2 chillas (150 g)", gi:45,
     n:{cal:210, protein:12, fat:5, carbs:28, fiber:6, sugar:3, zinc:1.6, magnesium:58, calcium:40, sodium:290, iron:2.4},
@@ -49,7 +49,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"paneer's protein and fat slow gastric emptying, softening the blood sugar curve of the roti." },
 
-  // ---------------- BREAKFAST · NON-VEG ----------------
+  //BREAKFAST · NON-VEG
   { id:8, name:"Egg White Vegetable Omelette", meal:["breakfast"], diet:"nonveg",
     serving:"3 egg whites + veg (180 g)", gi:20,
     n:{cal:180, protein:20, fat:6, carbs:8, fiber:3, sugar:3, zinc:1.3, magnesium:30, calcium:60, sodium:280, iron:1.5},
@@ -69,7 +69,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"a near-zero-carb, high-protein plate — the main watch-point is its sodium content." },
 
-  // ---------------- LUNCH · VEG ----------------
+  //LUNCH · VEG
   { id:11, name:"Quinoa and Vegetable Khichdi", meal:["lunch","dinner"], diet:"veg",
     serving:"1 bowl (250 g)", gi:46,
     n:{cal:280, protein:11, fat:6, carbs:42, fiber:7, sugar:3, zinc:1.7, magnesium:80, calcium:50, sodium:300, iron:2.9},
@@ -107,7 +107,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"kidney beans are a classic low-GI legume, and quinoa in place of white rice keeps the whole plate slower-burning." },
 
-  // ---------------- LUNCH · NON-VEG ----------------
+  //LUNCH · NON-VEG
   { id:17, name:"Grilled Fish Curry with Brown Rice", meal:["lunch","dinner"], diet:"nonveg",
     serving:"150 g fish + 3/4 cup rice", gi:48,
     n:{cal:360, protein:28, fat:12, carbs:38, fiber:4, sugar:3, zinc:1.4, magnesium:60, calcium:50, sodium:340, iron:1.6},
@@ -133,7 +133,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"egg protein and fat moderate the roti's carbohydrate release for a steadier lunch curve." },
 
-  // ---------------- DINNER · VEG ----------------
+  //DINNER · VEG
   { id:21, name:"Vegetable Soup with Lentil Dumplings", meal:["dinner"], diet:"veg",
     serving:"1 bowl (300 ml)", gi:30,
     n:{cal:170, protein:9, fat:3, carbs:26, fiber:6, sugar:4, zinc:1.2, magnesium:48, calcium:40, sodium:360, iron:1.9},
@@ -165,7 +165,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"swapping rice for cauliflower keeps this dinner very low-carb while mushrooms add zinc and B-vitamins." },
 
-  // ---------------- DINNER · NON-VEG ----------------
+  //DINNER · NON-VEG
   { id:26, name:"Grilled Salmon with Steamed Broccoli", meal:["dinner"], diet:"nonveg",
     serving:"150 g salmon + 1 cup broccoli", gi:12,
     n:{cal:320, protein:30, fat:18, carbs:8, fiber:4, sugar:2, zinc:1.3, magnesium:52, calcium:60, sodium:220, iron:1.4},
@@ -191,5 +191,3 @@ const FOODS = [
     ageBest:["senior","adult"],
     benefit:"a fast, low-carb evening bowl — light enough not to disturb overnight glucose." },
 ];
-
-// ---------------------------------------------------------------
