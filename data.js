@@ -1,11 +1,12 @@
+// ---------------------------------------------------------------
 // 1. FOOD DATABASE
 // Each item is one "row" of a nutrition table a real app would
 // keep in a database. giValue = glycemic index (0-100, lower is
 // better for blood sugar). diabetesFit scores each diabetes type
 // from 0-10 based on established dietary guidance for that type.
-
+// ---------------------------------------------------------------
 const FOODS = [
-  //BREAKFAST · VEG 
+  // ---------------- BREAKFAST · VEG ----------------
   { id:1, name:"Moong Dal Chilla with Mint Chutney", meal:["breakfast"], diet:"veg",
     serving:"2 chillas (150 g)", gi:45,
     n:{cal:210, protein:12, fat:5, carbs:28, fiber:6, sugar:3, zinc:1.6, magnesium:58, calcium:40, sodium:290, iron:2.4},
@@ -49,7 +50,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"paneer's protein and fat slow gastric emptying, softening the blood sugar curve of the roti." },
 
-  //BREAKFAST · NON-VEG
+  // ---------------- BREAKFAST · NON-VEG ----------------
   { id:8, name:"Egg White Vegetable Omelette", meal:["breakfast"], diet:"nonveg",
     serving:"3 egg whites + veg (180 g)", gi:20,
     n:{cal:180, protein:20, fat:6, carbs:8, fiber:3, sugar:3, zinc:1.3, magnesium:30, calcium:60, sodium:280, iron:1.5},
@@ -69,7 +70,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"a near-zero-carb, high-protein plate — the main watch-point is its sodium content." },
 
-  //LUNCH · VEG
+  // ---------------- LUNCH · VEG ----------------
   { id:11, name:"Quinoa and Vegetable Khichdi", meal:["lunch","dinner"], diet:"veg",
     serving:"1 bowl (250 g)", gi:46,
     n:{cal:280, protein:11, fat:6, carbs:42, fiber:7, sugar:3, zinc:1.7, magnesium:80, calcium:50, sodium:300, iron:2.9},
@@ -107,7 +108,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"kidney beans are a classic low-GI legume, and quinoa in place of white rice keeps the whole plate slower-burning." },
 
-  //LUNCH · NON-VEG
+  // ---------------- LUNCH · NON-VEG ----------------
   { id:17, name:"Grilled Fish Curry with Brown Rice", meal:["lunch","dinner"], diet:"nonveg",
     serving:"150 g fish + 3/4 cup rice", gi:48,
     n:{cal:360, protein:28, fat:12, carbs:38, fiber:4, sugar:3, zinc:1.4, magnesium:60, calcium:50, sodium:340, iron:1.6},
@@ -133,7 +134,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"egg protein and fat moderate the roti's carbohydrate release for a steadier lunch curve." },
 
-  //DINNER · VEG
+  // ---------------- DINNER · VEG ----------------
   { id:21, name:"Vegetable Soup with Lentil Dumplings", meal:["dinner"], diet:"veg",
     serving:"1 bowl (300 ml)", gi:30,
     n:{cal:170, protein:9, fat:3, carbs:26, fiber:6, sugar:4, zinc:1.2, magnesium:48, calcium:40, sodium:360, iron:1.9},
@@ -165,7 +166,7 @@ const FOODS = [
     ageBest:["young_adult","adult"],
     benefit:"swapping rice for cauliflower keeps this dinner very low-carb while mushrooms add zinc and B-vitamins." },
 
-  //DINNER · NON-VEG
+  // ---------------- DINNER · NON-VEG ----------------
   { id:26, name:"Grilled Salmon with Steamed Broccoli", meal:["dinner"], diet:"nonveg",
     serving:"150 g salmon + 1 cup broccoli", gi:12,
     n:{cal:320, protein:30, fat:18, carbs:8, fiber:4, sugar:2, zinc:1.3, magnesium:52, calcium:60, sodium:220, iron:1.4},
@@ -190,4 +191,142 @@ const FOODS = [
     diabetesFit:{type1:8, type2:8, gestational:6, prediabetes:8},
     ageBest:["senior","adult"],
     benefit:"a fast, low-carb evening bowl — light enough not to disturb overnight glucose." },
+
+  // ---------------- BREAKFAST · VEG (added) ----------------
+  { id:30, name:"Sattu Paratha with Curd", meal:["breakfast"], diet:"veg",
+    serving:"2 parathas + 100 g curd", gi:48,
+    n:{cal:290, protein:11, fat:9, carbs:38, fiber:7, sugar:4, zinc:1.5, magnesium:65, calcium:120, sodium:310, iron:2.8},
+    diabetesFit:{type1:7, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"roasted gram flour stuffing is high in protein and fibre, giving a filling, slow-release start to the day." },
+  { id:31, name:"Vegetable Daliya (Broken Wheat) Porridge", meal:["breakfast"], diet:"veg",
+    serving:"1 bowl (250 g)", gi:46,
+    n:{cal:240, protein:8, fat:5, carbs:38, fiber:6, sugar:3, zinc:1.1, magnesium:48, calcium:45, sodium:260, iron:2.0},
+    diabetesFit:{type1:7, type2:8, gestational:8, prediabetes:8},
+    ageBest:["senior","adult"],
+    benefit:"cracked wheat cooked soft with vegetables is gentle on digestion while still delivering steady, complex carbs." },
+  { id:32, name:"Sprouted Ragi Idli with Sambar", meal:["breakfast"], diet:"veg",
+    serving:"3 idlis + 1 cup sambar", gi:44,
+    n:{cal:270, protein:10, fat:5, carbs:42, fiber:7.5, sugar:3, zinc:1.3, magnesium:70, calcium:140, sodium:330, iron:2.6},
+    diabetesFit:{type1:8, type2:9, gestational:8, prediabetes:9},
+    ageBest:["young_adult","adult","senior"],
+    benefit:"fermenting and sprouting the ragi batter lowers its effective glycemic load while boosting calcium." },
+  { id:33, name:"Flaxseed and Oats Smoothie Bowl", meal:["breakfast"], diet:"veg",
+    serving:"1 bowl (300 ml)", gi:38,
+    n:{cal:280, protein:9, fat:11, carbs:32, fiber:8, sugar:6, zinc:1.4, magnesium:80, calcium:110, sodium:90, iron:2.2},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"ground flaxseed adds omega-3s and soluble fibre that blunt the sugar spike from the fruit in the bowl." },
+
+  // ---------------- BREAKFAST · NON-VEG (added) ----------------
+  { id:34, name:"Masala Egg Bhurji with Whole Wheat Toast", meal:["breakfast"], diet:"nonveg",
+    serving:"2 eggs + 1 slice toast", gi:35,
+    n:{cal:300, protein:18, fat:16, carbs:18, fiber:3, sugar:2, zinc:1.6, magnesium:30, calcium:50, sodium:380, iron:2.0},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"spiced scrambled eggs are protein-heavy and low-carb, keeping the morning glucose curve flat." },
+  { id:35, name:"Chicken Keema with Vegetables", meal:["breakfast"], diet:"nonveg",
+    serving:"1 cup (200 g)", gi:30,
+    n:{cal:260, protein:26, fat:12, carbs:10, fiber:3, sugar:2, zinc:2.0, magnesium:40, calcium:35, sodium:350, iron:2.4},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"lean minced chicken cooked with vegetables offers a high-protein, low-carb breakfast for a heavier start." },
+  { id:36, name:"Smoked Salmon and Cucumber Toast", meal:["breakfast"], diet:"nonveg",
+    serving:"1 slice toast + 60 g salmon", gi:33,
+    n:{cal:230, protein:16, fat:11, carbs:16, fiber:3, sugar:2, zinc:0.9, magnesium:28, calcium:40, sodium:420, iron:1.0},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult","senior"],
+    benefit:"omega-3-rich salmon on whole-grain toast keeps carbs modest while adding healthy fats that support insulin sensitivity." },
+  { id:37, name:"Turkey and Spinach Scramble", meal:["breakfast"], diet:"nonveg",
+    serving:"2 eggs + 60 g turkey", gi:28,
+    n:{cal:280, protein:24, fat:15, carbs:8, fiber:2, sugar:1, zinc:1.8, magnesium:32, calcium:45, sodium:360, iron:2.1},
+    diabetesFit:{type1:9, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"lean turkey and eggs together make a very low-carb, high-protein plate that barely moves blood sugar." },
+
+  // ---------------- LUNCH · VEG (added) ----------------
+  { id:38, name:"Chana (Chickpea) Salad with Quinoa", meal:["lunch"], diet:"veg",
+    serving:"1 bowl (280 g)", gi:35,
+    n:{cal:310, protein:13, fat:8, carbs:42, fiber:10, sugar:4, zinc:1.9, magnesium:75, calcium:60, sodium:240, iron:3.2},
+    diabetesFit:{type1:8, type2:9, gestational:8, prediabetes:9},
+    ageBest:["young_adult","adult"],
+    benefit:"chickpeas and quinoa combine plant protein with a high fibre load for a filling, low-GI lunch." },
+  { id:39, name:"Kadhi with Brown Rice and Vegetables", meal:["lunch"], diet:"veg",
+    serving:"1 bowl kadhi + 3/4 cup rice", gi:50,
+    n:{cal:300, protein:10, fat:9, carbs:44, fiber:5, sugar:5, zinc:1.2, magnesium:45, calcium:130, sodium:320, iron:1.8},
+    diabetesFit:{type1:6, type2:7, gestational:6, prediabetes:7},
+    ageBest:["adult","senior"],
+    benefit:"a yogurt-based curry with brown rice in place of white keeps this comfort classic gentler on blood sugar." },
+  { id:40, name:"Soya Chunk Curry with Bajra Roti", meal:["lunch"], diet:"veg",
+    serving:"1 cup curry + 2 rotis", gi:40,
+    n:{cal:320, protein:20, fat:8, carbs:38, fiber:9, sugar:3, zinc:2.1, magnesium:85, calcium:90, sodium:290, iron:3.5},
+    diabetesFit:{type1:8, type2:9, gestational:8, prediabetes:9},
+    ageBest:["young_adult","adult"],
+    benefit:"soy protein and pearl millet roti together give one of the highest protein-to-carb ratios on the veg lunch menu." },
+
+  // ---------------- LUNCH · NON-VEG (added) ----------------
+  { id:41, name:"Grilled Prawns with Vegetable Stir Fry", meal:["lunch"], diet:"nonveg",
+    serving:"150 g prawns + 1 cup vegetables", gi:20,
+    n:{cal:260, protein:28, fat:9, carbs:12, fiber:4, sugar:3, zinc:1.8, magnesium:50, calcium:70, sodium:380, iron:1.6},
+    diabetesFit:{type1:9, type2:9, gestational:7, prediabetes:9},
+    ageBest:["young_adult","adult"],
+    benefit:"prawns are naturally low-carb and high-protein, and quick stir-frying keeps the vegetables crisp and fibre-rich." },
+  { id:42, name:"Chicken and Lentil Soup with Multigrain Bread", meal:["lunch"], diet:"nonveg",
+    serving:"1 bowl + 1 slice bread", gi:38,
+    n:{cal:290, protein:22, fat:8, carbs:30, fiber:6, sugar:2, zinc:1.7, magnesium:55, calcium:50, sodium:400, iron:2.3},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["senior","adult"],
+    benefit:"shredded chicken and lentils in a light broth give sustained protein without a heavy carb load." },
+  { id:43, name:"Lean Mutton Curry with Brown Rice", meal:["lunch"], diet:"nonveg",
+    serving:"100 g mutton + 3/4 cup rice", gi:42,
+    n:{cal:340, protein:24, fat:14, carbs:32, fiber:4, sugar:2, zinc:3.2, magnesium:40, calcium:35, sodium:350, iron:3.0},
+    diabetesFit:{type1:6, type2:7, gestational:5, prediabetes:7},
+    ageBest:["adult"],
+    benefit:"a smaller portion of lean mutton keeps zinc and iron high while brown rice moderates the glycemic load." },
+  { id:44, name:"Fish Tikka with Cucumber Raita", meal:["lunch"], diet:"nonveg",
+    serving:"150 g fish + 100 g raita", gi:22,
+    n:{cal:250, protein:27, fat:10, carbs:10, fiber:2, sugar:3, zinc:1.1, magnesium:38, calcium:80, sodium:340, iron:1.3},
+    diabetesFit:{type1:9, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult","senior"],
+    benefit:"tandoor-grilled fish with cooling yogurt raita is high-protein and low-carb, ideal for a lighter lunch." },
+
+  // ---------------- DINNER · VEG (added) ----------------
+  { id:45, name:"Methi (Fenugreek) Moong Dal with Steamed Vegetables", meal:["dinner"], diet:"veg",
+    serving:"1 bowl dal + 1 cup vegetables", gi:32,
+    n:{cal:210, protein:11, fat:5, carbs:26, fiber:8, sugar:3, zinc:1.3, magnesium:60, calcium:55, sodium:250, iron:2.5},
+    diabetesFit:{type1:9, type2:9, gestational:8, prediabetes:9},
+    ageBest:["senior","adult"],
+    benefit:"fenugreek is well known for helping moderate post-meal glucose, paired here with a light, high-fibre dal." },
+  { id:46, name:"Paneer and Vegetable Stir Fry (Light)", meal:["dinner"], diet:"veg",
+    serving:"1 cup (220 g)", gi:25,
+    n:{cal:230, protein:14, fat:12, carbs:12, fiber:4, sugar:3, zinc:1.2, magnesium:35, calcium:180, sodium:280, iron:1.4},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"quickly stir-fried paneer keeps this dinner protein-rich and low-carb without feeling like a heavy meal." },
+  { id:47, name:"Vegetable Clear Soup with Roasted Chana", meal:["dinner"], diet:"veg",
+    serving:"1 bowl (300 ml)", gi:24,
+    n:{cal:170, protein:8, fat:4, carbs:20, fiber:6, sugar:3, zinc:1.0, magnesium:40, calcium:45, sodium:380, iron:1.8},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["senior","adult"],
+    benefit:"a light vegetable broth topped with roasted chickpeas for crunch and protein — easy on the stomach before bed." },
+
+  // ---------------- DINNER · NON-VEG (added) ----------------
+  { id:48, name:"Grilled Prawns with Sautéed Greens", meal:["dinner"], diet:"nonveg",
+    serving:"150 g prawns + 1 cup greens", gi:15,
+    n:{cal:220, protein:26, fat:8, carbs:6, fiber:3, sugar:2, zinc:1.7, magnesium:45, calcium:65, sodium:360, iron:1.5},
+    diabetesFit:{type1:9, type2:9, gestational:7, prediabetes:9},
+    ageBest:["young_adult","adult"],
+    benefit:"prawns bring lean protein with almost no carbohydrate, making this one of the lightest dinners available." },
+  { id:49, name:"Chicken and Vegetable Broth with Tofu", meal:["dinner"], diet:"nonveg",
+    serving:"1 bowl (300 ml)", gi:18,
+    n:{cal:180, protein:16, fat:6, carbs:10, fiber:3, sugar:2, zinc:1.3, magnesium:38, calcium:60, sodium:400, iron:1.6},
+    diabetesFit:{type1:8, type2:8, gestational:7, prediabetes:8},
+    ageBest:["senior","adult"],
+    benefit:"a warm, low-carb broth with tofu and shredded chicken that's gentle for a late, easy-to-digest dinner." },
+  { id:50, name:"Baked Egg Muffins with Spinach", meal:["dinner"], diet:"nonveg",
+    serving:"2 muffins (150 g)", gi:20,
+    n:{cal:200, protein:15, fat:12, carbs:6, fiber:2, sugar:1, zinc:1.4, magnesium:28, calcium:60, sodium:300, iron:1.8},
+    diabetesFit:{type1:9, type2:8, gestational:7, prediabetes:8},
+    ageBest:["young_adult","adult"],
+    benefit:"individually baked egg muffins are nearly carb-free and easy to portion for a light finish to the day." },
 ];
